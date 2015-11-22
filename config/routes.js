@@ -38,13 +38,11 @@ module.exports.routes = {
 	'/login': {
 		view: 'login'
 	},
-	'/cuenta': {
-		view: 'cuenta',
-		policy: 'esUsuario'
-	},
-	'post /doLogin': 'UserController.logIn',
-	'get /logout': 'UserController.logOut',
-	'get /cuentaAdmin': 'UserController.adminCuenta'
+	'get /': 'UsuariosController.home',
+    '/usuario':{
+        view: 'usuario',
+        policy: 'sessionAuth'
+    }
 
 
 	/***************************************************************************
