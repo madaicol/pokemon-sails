@@ -1,13 +1,17 @@
+<div style="background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #fcfff4 0%,#dfe5d7 40%,#b3bead 100%);">
 <h1>Sus Datos son: </h1>
-<h3>Nombre: <%- req.session.user.usuario %></h3>
-<p>Categoria: <%- req.session.user.categoria %></p>
-<p>Tipo: <%- req.session.user.tipo %></p>
-<p>Altura: <%- req.session.user.altura %></p>
-<p>Habilidad: <%- req.session.user.habilidad %></p>
+<img src="images/<%- req.session.user.url %>">
+<h2><b>Nombre:</b> <%- req.session.user.usuario %></h2>
+<p><b>Categoría:</b> <%- req.session.user.categoria %></p>
+<p><b>Tipo:</b> <%- req.session.user.tipo %></p>
+<p><b>Altura:</b> <%- req.session.user.altura %> &nbsp; m</p>
+<p><b>Habilidad:</b> <%- req.session.user.habilidad %></p>
 <br>
 <h2>Subir foto</h2>
-<img src="images/<%- req.session.user.url %>">
+
 <form action="Usuarios/subirFoto" enctype="multipart/form-data" method="post">
     <input type="file" name="perfil">
     <input type="submit" value="Submit">
 </form>
+</div>
