@@ -2,13 +2,14 @@
  * UsuariosController
  *
  * @description :: Server-side logic for managing Usuarios
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
 module.exports = {
-	subirFoto: function (req, res) {
+
+    subirFoto: function (req, res) {
         var params = req.allParams();
-        var deleteFd = 'C:\\Users\\Adrian\\Documents\\NODEjs\\ArchivosSesion\\assets\\images\\';
+        var deleteFd = 'C:\\Users\\MadaiCarlos\\Documents\\GitHub\\pokemon-sails\\assets\\images';
         sails.log.info('Perfil: ',params.perfil);
         
         req.file('perfil').upload({
@@ -95,5 +96,5 @@ module.exports = {
         });
 
     }
-};
 
+};
