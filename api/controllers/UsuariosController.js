@@ -10,8 +10,8 @@ module.exports = {
 	subirFoto: function (req, res) {
 
 		var params = req.allParams();
-		var deleteFd = 'F:\\Documents\\JavaScript\\Repositorios\\TecWebJav\\ArchivosSesionEPN\\assets\\images';
-		console.log(req);
+		var deleteFd = 'C:\\Users\\MadaiCarlos\\Documents\\GitHub\pokemon-sails\\assets\\images';
+		//console.log(req);
 		sails.log.info('Perfil: ', params.perfil);
 
 		req.file('perfil').upload({
@@ -28,7 +28,7 @@ module.exports = {
 			}
 
 
-			console.log(uploadedFiles[0]);
+			//console.log(uploadedFiles[0]);
 			var urlImagen = uploadedFiles[0].fd.replace(deleteFd, "");
 			// Save the "fd" and the url where the avatar for a user can be accessed
 
@@ -107,7 +107,7 @@ module.exports = {
 			if (err)
 				return res.redirect('/formulario');
 
-			console.log(nuevoUsuario);
+			//console.log(nuevoUsuario);
 			return res.redirect('/login')
 		})
 

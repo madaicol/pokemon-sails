@@ -8,49 +8,34 @@
 module.exports = {
 
 	attributes: {
-		attributes: {
-			nombre: {
-				type: "string",
-				required: true
-			},
-			password: {
-				type: "string",
-				defaultsTo: "123456"
-			},
-			usuario: {
-				type: "string",
-				unique: true
-			},
-			avatarUrl: {
-				type: "string",
-				unique: true
-			},
-			avatarFd: {
-				type: "string",
-				unique: true
-			},
-			url: {
-				type: "string",
-				unique: true
-			},
-			altura: {
-				type: "integer"
-			},
-			categoria: {
-				type: "string"
-			},
-			tipo: {
-				type: "string"
-			},
-			habilidad: {
-				type: "string"
-			},
-			pokemon: {
-				collection: "pet",
-				via: ''
-			}
 
+		nombre: {
+			type: "string",
+			required: true
+		},
+		password: {
+			type: "string",
+			defaultsTo: "123456"
+		},
+		usuario: {
+			type: "string",
+			unique: true
+		},
+		avatarUrl: {
+			type: "string",
+			unique: true
+		},
+		avatarFd: {
+			type: "string",
+			unique: true
+		},
+		url: {
+			type: "string",
+			unique: true
+		},
+		pokemons: {
+			collection: 'Pokemon',
+			via: 'entrenador'
 		}
-
 	}
 };

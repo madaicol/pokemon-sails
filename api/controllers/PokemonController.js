@@ -10,7 +10,12 @@ module.exports = {
 	registrarPokemon: function (req, res) {
 		/*Mirar abajo */
 		var deleteFd = 'C:\\Users\\MadaiCarlos\\Documents\\GitHub\pokemon-sails\\assets\\images';
-		var id;
+		var id;	
+		console.log("POKEMONS o POKEMON");		
+		//console.log(Pokemons.find());
+		//console.log(Pokemons.find());
+		//console.log(Pokemon.find());		
+		
 		Pokemons.find()
 			.exec(function (err, results) {
 				if (err) return res.negotiate();
@@ -28,7 +33,7 @@ module.exports = {
 			if (uploadedFiles.length === 0) {
 				return res.badRequest('No file was uploaded');
 			}
-			console.log(uploadedFiles[0]);
+			//console.log(uploadedFiles[0]);
 			var urlImagen = uploadedFiles[0].fd.replace(deleteFd, "");
 			// Generate a unique URL where the avatar can be downloaded.
 
@@ -47,7 +52,7 @@ module.exports = {
 				if (err)
 					return res.redirect('/pokemonF');
 
-				console.log(nuevoPokemon);
+				//console.log(nuevoPokemon);
 				return res.redirect('/pokemon')
 			})
 		});
@@ -55,7 +60,7 @@ module.exports = {
 	},
 
 	devolverPokemons: function (req, res) {
-		console.log(req.session.user.id);
+		//console.log(req.session.user.id);
 		var pokemon = [];
 		var j = 0;
 		var i;
@@ -68,7 +73,7 @@ module.exports = {
 						j++;
 					}
 				}
-				console.log(pokemon);
+				//console.log(pokemon);
 				return res.view('pokemon', {
 					pokemons: pokemon
 				});

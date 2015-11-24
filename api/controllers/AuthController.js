@@ -7,8 +7,10 @@
 
 module.exports = {
 	 logIn: function (req, res) {
-
+		
         var params = req.allParams();
+		sails.log.info(req.allParams());
+		 //info: { usuario: 'pikachu', password: 'pikachu', id: undefined }
         sails.log.info('Usuario: ', params.usuario, ' Password: ', params.password);
 
         if (params.usuario === undefined || params.password === undefined) {
@@ -22,9 +24,10 @@ module.exports = {
                     usuario: params.usuario
                 })
                 .exec(function (err, results) {
-                    if (err) return res.negotiate();
+                    if (err) return res.negotiate();	
 
                     if (results) {
+						
                         sails.log.info('Se encontro el usuario: ', results.usuario);
                         if (params.password == results.password) {
                             sails.log.info('Login correcto');
@@ -45,16 +48,16 @@ module.exports = {
         }
     },
     
-    salir: function (req, res) {
+    logOut: function (req, res) {
         var user = {
             nombre: '',
             usuario: '',
             password: ''
         }
-         delete req.session.user;
+        delete req.session.user;
         delete req.session.authenticated;
 
-        return res.view('login', {
+        return res.view('/', {
             usuarios: user,
         });
     }
