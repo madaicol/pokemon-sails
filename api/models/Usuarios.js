@@ -44,6 +44,10 @@ module.exports = {
 			},
 			habilidad: {
 				type: "string"
+			},
+			pokemon: {
+				collection: "pet",
+				via: ''
 			}
 
 		}

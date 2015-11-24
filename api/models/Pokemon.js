@@ -9,6 +9,41 @@ module.exports = {
 
   attributes: {
 
-  }
+        nombre: {
+            type: 'string',
+            required: 'true'
+        },
+        nick: {
+            type: 'string',
+            required: 'true'
+        },
+        tipo: {
+            type: 'string',
+            enum: ['agua', 'fuego', 'psiquico', 'hierba', 'electrico', 'bicho']
+        },
+        habilidadEspecial: {
+            type: 'string'
+        },
+        numeroPokemo: {
+            type: 'string',
+            required: 'true'
+        },
+        avatarUrl: {
+            type: "string",
+            unique: true
+        },
+        avatarFd: {
+            type: "string",
+            unique: true
+        },
+        url: {
+            type: "string",
+            unique: true
+        },
+        maestro: {
+            model: 'Usuarios'
+        }
+
+    }
 };
 
