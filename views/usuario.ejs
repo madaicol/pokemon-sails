@@ -1,17 +1,55 @@
-<div style="background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #fcfff4 0%,#dfe5d7 40%,#b3bead 100%);">
-<h1>Sus Datos son: </h1>
-<img src="images/<%- req.session.user.url %>">
-<h2><b>Nombre:</b> <%- req.session.user.usuario %></h2>
-<p><b>Categoría:</b> <%- req.session.user.categoria %></p>
-<p><b>Tipo:</b> <%- req.session.user.tipo %></p>
-<p><b>Altura:</b> <%- req.session.user.altura %> &nbsp; m</p>
-<p><b>Habilidad:</b> <%- req.session.user.habilidad %></p>
-<br>
-<h2>Subir foto</h2>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span>Menu</span>
+			</button>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="usuario">Perfil</a></li>
+				<li><a href="pokemon">Pokemon</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
-<form action="Usuarios/subirFoto" enctype="multipart/form-data" method="post">
-    <input type="file" name="perfil">
-    <input type="submit" value="Submit">
-</form>
+<div class="container">
+	<div class="row">
+	<h1>Bienvenido entrenador pokemón</h1>
+		<div class="col-sm-3">			
+			<img src="images/<%- req.session.user.url %>" width="250" height="250">
+			<br>
+		</div>
+		<div class="col-sm-6">
+		<br>
+		<br>
+		<br>
+			<p style="font-size:20px"><b>Nombre:</b>
+				<%- req.session.user.nombre %>
+			</p>
+			<p style="font-size:20px"><b>Usuario:</b>
+				<%- req.session.user.usuario %>
+			</p>
+		</div>
+
+		<br>
+	</div>
+	<div class="row">
+		<h2 style="font-size: 16px;">Seleccione su foto de perfil: </h2>
+		<form action="Usuarios/subirFoto" enctype="multipart/form-data" method="post">
+
+			<input class="btn btn-info" type="file" name="perfil">
+			<input class='bnt btn-warning' type="submit" class="btn btn-default" value="Submit">
+
+		</form>
+		<div align="right">
+			<a href="formularioPokemon" action='formularioPokemon'>
+				<button class="btn btn-danger">Agregar Nuevo Pokemón</button>
+			</a>
+		</div>
+	</div>
+
 </div>

@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span>Menu</span>
+			</button>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="usuario">Perfil</a></li>
+				<li><a href="pokemon">Pokemón </a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<h1>Lista de Pokemons</h1>
+	<ul>
+		<% for(var i=0; i<pokemon.length; i++) {%>
+			<div class="row">
+				<div class="col-sm-4" style="position: relative;width: 300px;
+	height: 440px;">
+					<li style='background:rgba(1<%=i*20%>, 2<%=i*9%>, 1<%=i*25%>,0.3)'>
+						<div align='center'><img src="images/<%- pokemon[i].url %>"></div>
+						<div class="caption">
+							<div align='center'>
+								<h2><b><%= pokemon[i].nombre %></b></h2></div>
+							<p><b>Tipo: </b>
+								<%= pokemon[i].tipo %>
+									<%= pokemon[i].tipo2 %>
+							</p>
+							<p><b>Debilidad: </b>
+								<%= pokemon[i].debilidad %>
+									<%= pokemon[i].debilidad2 %>
+										<%= pokemon[i].debilidad3 %>
+											<%= pokemon[i].debilidad4 %>
+							</p>
+							<p><b>Habilidad Especial:</b>
+								<%= pokemon[i].habilidadEspecial %>
+							</p>
+						</div>
+				</div>
+			</div>
+			</li>
+			<% } %>
+	</ul>
+	<div align="right">
+		<a href="formularioPokemon" action='formularioPokemon'>
+			<button class="btn btn-danger">Agregar Nuevo Pokemón</button>
+		</a>
+	</div>
+
+</div>

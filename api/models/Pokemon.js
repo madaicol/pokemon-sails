@@ -20,7 +20,7 @@ module.exports = {
 		},
 		tipo2: {
 			type: 'string',
-			enum: ['Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psiquico', 'Roca', 'Siniestro', 'Tierra', 'Veneno', 'Volador', 'Oscuro', '???']
+			enum: ['','Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psiquico', 'Roca', 'Siniestro', 'Tierra', 'Veneno', 'Volador', 'Oscuro', '???']
 		},
 		debilidad: {
 			type: 'string',
@@ -29,15 +29,15 @@ module.exports = {
 		},
 		debilidad2: {
 			type: 'string',
-			enum: ['Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psiquico', 'Roca', 'Siniestro', 'Tierra', 'Veneno', 'Volador', 'Oscuro', '???'],
+			enum: ['','Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psiquico', 'Roca', 'Siniestro', 'Tierra', 'Veneno', 'Volador', 'Oscuro', '???'],
 		},
 		debilidad3: {
 			type: 'string',
-			enum: ['Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psiquico', 'Roca', 'Siniestro', 'Tierra', 'Veneno', 'Volador', 'Oscuro', '???'],
+			enum: ['','Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psiquico', 'Roca', 'Siniestro', 'Tierra', 'Veneno', 'Volador', 'Oscuro', '???'],
 		},
 		debilidad4: {
 			type: 'string',
-			enum: ['Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psiquico', 'Roca', 'Siniestro', 'Tierra', 'Veneno', 'Volador', 'Oscuro', '???'],
+			enum: ['','Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psiquico', 'Roca', 'Siniestro', 'Tierra', 'Veneno', 'Volador', 'Oscuro', '???'],
 		},
 		habilidadEspecial: {
 			type: 'string'

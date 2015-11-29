@@ -1,7 +1,13 @@
 <div class="jumbotron">
-  <h1>Bienvenidos a Pokemon-facebook!</h1>
-  <div align="center">
-  <img src="/images/portada.png" alt="Portada de la página">
-  </div>
-  <p><a class="btn btn-primary btn-lg" href="login" role="button">Inicie Sesion</a></p>
+	<h1>Bienvenidos a Pokemon-facebook!</h1>
+	<div align="center">
+		<img src="/images/portada.png" alt="Portada de la página">
+	</div>
+	<p><a class="btn btn-primary btn-lg" href="login" role="button">Inicie Sesion</a></p>
 </div>
+<h2>Entrenadores - pokemons </h2>
+<ul>
+<% for(var i=0; i<Usuarios.length; i++) {%>
+   <li><!-- <% /*= Usuarios[i].nombre */%> --></li>
+<% } %>
+</ul>

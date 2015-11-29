@@ -39,13 +39,26 @@ module.exports.routes = {
 		view: 'login'
 	},
 	'get /': 'UsuariosController.home',
+	
+	'/salir': 'AuthController.salir',
+	
+	'/formularioUsuario':{
+		view:'formularioUsuario'
+	},
 	'/usuario': {
 		view: 'usuario',
 		policy: 'sessionAuth'
 
 	},
-	'/cuenta': {
-		view: 'cuenta'
+	'/pokemon':{
+		controller:'PokemonController',
+		action: 'devolverPokemon',
+		policy: 'sessionAuth'
+	},	
+	
+	'/formularioPokemon':{
+		view:'formularioPokemon',
+		policy: 'sessionAuth'
 	}
 
 
